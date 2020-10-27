@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css"> 
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <title>A/B Testing</title>
+  </head>
+  <body>
+
+    <!-- <div id="title" class="container-fluid bg-white py-5"> -->
+    <div class="d-flex flex-column justify-content-center align-items-center bg-white py-5">
+      <h1 class="title display-2 mx-5 mb-5 pb-2">A/B Testing</h1>
+      <img src="img/div.png" alt="text divider" class="mb-5" style="width: 3.5rem; height: 1rem;">
+      <h3 class="subtitle text-center mx-5"> Performing A/B testing by observing user behaviors</h3>  
+    </div>
+    <!-- </div> -->
+
+    <div class="d-flex flex-column blankets"></div>
+
+    <div id="overview" class="container-fluid bg-white text-center py-5">
+      <h3 class="pb-5 display-4">Website Overview</h3>
+      <img src="img/div_alt.png" alt="text divider" class="mb-5" style="width: 3.5rem; height: 1rem;">
+      <h3 class="pb-5 display-3 font-weight-normal">Cactus Shopping Website</h3>
+      <a style="text-decoration:none" href="https://salty-mesa-11265.herokuapp.com/" target="_blank" class="text-light btn-lg mt-3">Link Here</a> 
+      <div class="container blurb text-left mt-5">
+        <p class="lead ma-5">
+          The website resembles a simple shopping site where users can add items (cacti) into their shopping cart. 
+        </p>
+        <p class="lead ma-5">
+          Each cactus has a price & the number of each cactus added in the shopping cart is shown next to the "Add to Cart" Button
+        </p>
+        <p class="lead ma-5">
+          The shopping cart icon also shows the total number of items added
+        </p>
+        <p class="lead ma-5">
+          When the user clicks the cart, they would be redirected to a checkout page, where the <b>total cost</b> would be shown
+        </p>
+      </div>
+      <div class="container blurb text-left mt-5">
+        <h2><b>Data Collection Process: </b></h2>
+        <hr>
+        <p class="lead ma-5">
+          There are two versions to this website, Version A & B.
+        </p>
+        <p class="lead ma-5">
+          Users that visit the website will be randomly redirected to one of the two, and their behavior will be logged.
+        </p>
+        <p class="lead ma-5">
+          Logs are used data such as when the users entered the site & when they left, which version of the site was used, when/which items they clicked on & the time they entered the checkout page and/or left.
+        </p>
+        <p class="lead ma-5">
+          Users in this projects are fellow students who are asked to perform the task of <u>adding $150 worth of cacti into their shopping cart & checking out</u>.
+        </p>
+        <p class="lead ma-5">
+          We then compare between the 2 versions using two metrics: <b>Time to Completion</b> & <b>Return Rate</b>.
+        </p>
+        <p class="lead ma-5">
+          <b class="ml-3">Time to Completion: </b> The time it takes to complete the desired task <br>
+          <b class="ml-3">Return Rate: </b> The number of times a user returned to the page
+        </p>
+      </div>
+
+      <div class="container blurb mt-5">
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+            <h3 class="pa-5 pb-3 my-3 display-5 text-center"><b>Version A</b></h3>
+            <img src="img/version_a.png" class="prototype" alt="version a webpage">
+          </div>
+          <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+            <h3 class="pa-5 pb-3 my-3 display-5 text-center"><b>Version B</b></h3>
+            <img src="img/version_b.png" class="prototype" alt="version b webpage">
+          </div>
+        </div>
+      </div>
+      
+    <div id="questions" class="container-fluid text-center bg-white py-5">
+      <h3 class="py-5 display-4 text-center">Hypotheses</h3>
+      <img src="img/div_alt.png" alt="text divider" class="divider" style="margin: auto; width: 3.5rem; height: 1rem;">
+      <div class="row">
+        <div class="col">
+          <div class="row justify-content-center align-items-center py-4">
+            <div class="col-4">
+              <h4 class="section-title font-weight-normal text-center mb-3">
+                <b>Time to Completion</b>
+              </h4>
+            </div>
+            <div class="col">
+              <h4 class="section-title font-weight-normal text-left mb-3">
+                <b class="metric">Null Hypotheses</b>
+              </h4>
+              <h4 class="section-title font-weight-normal text-left">
+                <b>Version A & B perfoms the same</b>
+                <br><br>- Users take the same amount of time to complete the task in both versions.
+              </h4>
+              <h4 class="section-title font-weight-normal text-left mb-3 mt-4">
+                <b class="metric">Alternative Hypotheses</b>
+              </h4>
+              <h4 class="section-title font-weight-normal text-left">
+                <b>Version B performs worse than Version A</b>
+                <br><br>- Users take longer to complete the task in Version B
+              </h4>
+            </div>
+          </div>
+          <div class="row justify-content-center align-items-center py-4 inter">
+            <div class="col-4">
+              <h4 class="section-title font-weight-normal text-center mb-3">
+                <b>Return Rate</b>
+              </h4>
+            </div>
+            <div class="col">
+              <h4 class="section-title font-weight-normal text-left mb-3">
+                <b class="metric">Null Hypotheses</b>
+              </h4>
+              <h4 class="section-title font-weight-normal text-left">
+                <b>Version A & B perfoms the same</b>
+                <br><br>- Users return to the shopping page from checkout the same number of times in both versions.
+              </h4>
+              <h4 class="section-title font-weight-normal text-left mb-3 mt-4">
+                <b class="metric">Alternative Hypotheses</b>
+              </h4>
+              <h4 class="section-title font-weight-normal text-left">
+                <b>Version B performs better than Version A</b>
+                <br><br>- Users are less likely to return to the shopping page after checkout out in Version B
+              </h4>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <div id="feedback" class="container-fluid text-center bg-white py-5">
+      <h3 class="pa-5 pb-3 display-4 text-center">Conclusion</h3>
+      <img src="img/div_alt.png" alt="text divider" class="divider" style="margin: auto; width: 3.5rem; height: 1rem;">
+      <h3 class="pa-5 pb-3 my-3 display-5 text-center">Infographic</h3>
+      <img src="img/info.png" class="infographic" alt="infographic">
+    </div>
+
+    <div id="feedback" class="container-fluid text-center bg-white py-5">
+      <h3 class="pa-5 pb-3 display-4 text-center">Discussion & Follow-Up</h3>
+      <img src="img/div_alt.png" alt="text divider" class="divider" style="margin: auto; width: 3.5rem; height: 1rem;">
+      <div class="container blurb text-left mt-5">
+        <ul>
+          <li>
+            <p class="lead ma-5">
+              The results & statistics of this project was primarily impacted by a website bug in Version B. 
+            </p>
+            <p class="lead ma-5">
+              As a result, the logs for Version B, initially, had really high <b>Time to Completion</b> & really low <b>Return Rate</b> since users were confused by the bug & 
+              weren't able to "return" since they couldn't access the checkout page.
+            </p>
+            <p class="lead ma-5">
+              I invited some new users to try out the new version after fixing the bug, and made my conclusions on accepting/rejecting the hypotheses based on the collected data.
+            </p>
+          </li>
+          <li>
+            <p class="lead ma-5">
+              The fact that, given the above bug, average <b>Time to Completion</b> between the 2 versions did <b><u>NOT</u></b> differ by a lot suggests that the design changes still had a positive effect.
+            </p>
+          </li>
+          <li>
+            <p class="lead ma-5">
+              By applying principles like proximity in version B & re-positioning the "Add to Cart" button, users are able to see the item, the price, and the button as <u>one action group</u>, making it easier to check the price & buy the item immediately.
+            </p>
+            <p class="lead ma-5">
+              In contrast, user of Version A have to read all the way to the end of the product description to know how much they'd have to pay.
+            </p>
+          </li>
+          <li>
+            <p class="lead ma-5">
+              By adjusting font sizes, we can also create an importance hierarchy.
+            </p>
+            <p class="lead ma-5">
+              When the price is shown in larger font, it stands out from the descriptions & is more noticeable.
+            </p>
+            <p class="lead ma-5">
+              This is good because price is one of the main determining factors for purchasing an item.
+            </p>
+          </li>
+        </ul>
+        
+      </div>
+    </div>
+
+    <footer class="bg-white text-center py-3">
+      <div class="container">
+        <hr>
+        <p class="mb-0">
+          made in 25.0330° N, 121.5654° E
+        </p>
+      </div>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>
